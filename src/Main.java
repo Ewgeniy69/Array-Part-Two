@@ -10,7 +10,7 @@ public class Main {
         monthlyPayments[3] = 19;
         monthlyPayments[4] = 13;
         int sum = 0;
-        for (int i: monthlyPayments) {
+        for (int i : monthlyPayments) {
             sum += i;
         }
         System.out.println("Сумма трат за месяц составила " + sum + " рублей");
@@ -20,17 +20,16 @@ public class Main {
         int[] weeklyExpenses = {50, 100, 200, 150, 300};
         int maxExpenses = 0;
         int minExpenses = Integer.MAX_VALUE;
-        for (int max : weeklyExpenses) {
-            if (max > maxExpenses) {
-                maxExpenses = max;
+        for (int expenses : weeklyExpenses) {
+            if (expenses > maxExpenses) {
+                maxExpenses = expenses;
             }
-            for (int min : weeklyExpenses) {
-                if (min < minExpenses) {
-                    minExpenses = min;
-                }
+            if (expenses < minExpenses) {
+                minExpenses = expenses;
             }
         }
         System.out.println("Минимальная сумма трат за неделю составила " + minExpenses + " рублей.Максимальная сумма трат за неделю составила " + maxExpenses + " рублей.");
+        // изменен код: устранена вложенность
 
         System.out.println("Task # 3");
 
@@ -40,8 +39,10 @@ public class Main {
         System.out.println("Task # 4");
 
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length - 1; i >=0; i--) {
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
             System.out.print(reverseFullName[i]);
         }
+        System.out.println();
+        //добавлена команда
     }
 }
